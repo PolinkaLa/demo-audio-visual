@@ -1,32 +1,117 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #131626;
-    margin: 0;
-    width: 100vw;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #131626;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Indie Flower', cursive;
 }
 
 h1 {
-    color: crimson;
-    font-family: 'Indie Flower', cursive;
-    font-size: 60px;
-    letter-spacing: 10
+  color: crimson;
+  font-size: 60px;
+  letter-spacing: 10
 }
 
 #visual {
-    display: flex;
-    flex-flow: wrap-reverse;
-    height: 300px;
-    margin-bottom: 40px;
+  display: flex;
+  flex-flow: wrap-reverse;
+  height: 300px;
+  margin-bottom: 40px;
 }
+
 .column {
-    width: 12px;
-    margin: 3px;
-    height: 1px;
-    background: crimson;
+  width: 12px;
+  margin: 3px;
+  height: 1px;
+  background: crimson;
 }
+
+label {
+  color: white;
+  font-size: 25px
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: white;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  background: crimson;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: white;
+}
+
+input[type=range]::-moz-range-track {
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: white;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: crimson;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: white;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: white;
+}
+
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  height: 20px;
+  width: 20px;
+  background: crimson;
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+  color: crimson;
+  font-size: 25;
+  margin: 0;
+}
+
+#setting {
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 20px
+} 

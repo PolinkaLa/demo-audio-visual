@@ -2,24 +2,21 @@ let audio, visual, context, analyser, src, array;
 
 const elements = [];
 
-const columnCount = 80;
+let columnCount = 55;
+
+const range = document.getElementById("range")
 
 visual = document.getElementById("visual");
 audio = document.getElementById("audio");
 
 window.onload = (() => {
-    let columns = "";
-    for (let i = 1; i <= columnCount; i++) {
-        let item = document.createElement('div');
-        item = `<div class="column" id="${i*10}"></div>`
-        columns += item;
-    }
-    visual.innerHTML = columns;
-    for (let i = 1; i <= columnCount; i++) {
-        elements[i] = document.getElementById(i*10).style;
-    }
-
+    renderGistogramm(columnCount)
 } )
+
+range.addEventListener("change", () => {
+    columnCount = document.getElementById("range").value;
+    renderGistogramm(columnCount)
+})
 
 audio.addEventListener("playing", (() => {
     if(!context) {
@@ -46,5 +43,18 @@ function loop() {
     analyser.getByteFrequencyData(array);
     for (let i = 1; i <= columnCount; i++) {
         elements[i].height = (array[i*10])+"px";
+    }
+}
+
+function renderGistogramm(columnCount) {
+    let columns = "";
+    for (let i = 1; i <= columnCount; i++) {
+        let item = document.createElement('div');
+        item = `<div class="column" id="${i*10}"></div>`
+        columns += item;
+    }
+    visual.innerHTML = columns;
+    for (let i = 1; i <= columnCount; i++) {
+        elements[i] = document.getElementById(i*10).style;
     }
 }
