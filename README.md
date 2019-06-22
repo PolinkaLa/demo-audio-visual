@@ -18,8 +18,4 @@ After press "Play" you can see visualisation of playing music:
 
 ![play](/screens/play.png)
 
-Also you can change size of gistagramm - less or more:
-
-![less](/screens/less.png)
-
-![more](/screens/more.png)
+Also you can change size of gistagramm - less or more
