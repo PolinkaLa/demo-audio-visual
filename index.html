@@ -2,18 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Visualisation Music Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Visualisation music demo</h1>
     <div id="visual"></div>
+    <div class="form-group">
+        <input type="file" name="file" id="file" class="input-file">
+        <label for="file" class="btn btn-tertiary">
+            <span class="js-fileName">Upload file</span>
+        </label>
+        <p id="fileName"></p>
+    </div>
+    <audio src="" id="audio" controls></audio>
     <div id="setting">
         <p>Setting the number of columns:</p>
         <label>10 <input type="range" min="10" max="100" value="55" id="range"> 100</label>
     </div>
-    
-    <audio src="OneRepublic.mp3" id="audio" controls></audio>
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,9 @@ const elements = [];
 
 let columnCount = 55;
 
-const range = document.getElementById("range")
+const range = document.getElementById("range");
+
+const file = document.getElementById("file");
 
 visual = document.getElementById("visual");
 audio = document.getElementById("audio");
@@ -16,6 +18,16 @@ window.onload = (() => {
 range.addEventListener("change", () => {
     columnCount = document.getElementById("range").value;
     renderGistogramm(columnCount)
+})
+
+file.addEventListener("change", () => {
+
+    audio.src = URL.createObjectURL(file.files[0]);
+    console.log(file.files[0]);
+    document.getElementById("fileName").innerText = file.files[0].name
+    audio.onend = ((e) => {
+        URL.revokeObjectURL(this.src);
+    })
 })
 
 audio.addEventListener("playing", (() => {

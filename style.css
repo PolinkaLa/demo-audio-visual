@@ -3,7 +3,7 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background: #131626;
   margin: 0;
@@ -15,7 +15,8 @@ body {
 h1 {
   color: crimson;
   font-size: 60px;
-  letter-spacing: 10
+  letter-spacing: 10;
+  margin:0;
 }
 
 #visual {
@@ -26,7 +27,7 @@ h1 {
 }
 
 .column {
-  width: 12px;
+  width: 10px;
   margin: 3px;
   height: 1px;
   background: crimson;
@@ -111,7 +112,33 @@ p {
 
 #setting {
   text-align: center;
+}
+
+.btn-tertiary {
+  text-align: center;
+  color: white;
+  padding: 0;
+  line-height: 40px;
+  width: 300px;
+  margin: auto;
+  display: block;
+  border: 2px solid crimson;
+}
+
+.btn-tertiary:hover,
+.example-2 .btn-tertiary:focus {
+  color: crimson
+}
+
+.input-file {
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  overflow: hidden;
   position: absolute;
-  top: 50px;
-  left: 20px
-} 
+  z-index: -1
+}
+
+#fileName {
+  padding-top: 10px;
+}
