@@ -6,6 +6,8 @@ HTML5 audio tag and vanila JS are used in this demo
 
 To use this demo download or clone this repo an open index.html
 
+Live demo is available by link https://demo.polina-lappo.ru/audio-visual/
+
 Start screen of app has this view:
 
 ![start](/screens/start.png)
